@@ -14,8 +14,10 @@ zabbix_export:
       name: 'Juniper BGP Stats by SNMP'
       description: |
         Juniper BGP Stats by SNMP
+        
         author: change4826
-        Repo_url: https://github.com/change48/zabbix_template
+        Repo_url
+        https://github.com/change48/zabbix_template
       groups:
         -
           name: juniper
@@ -111,6 +113,11 @@ zabbix_export:
                   priority: INFO
                   description: 'bgp PrefixesAccepted value changes more than > {$DIFF_RATIO}'
                   manual_close: 'YES'
+                  dependencies:
+                    -
+                      name: 'BGP Peer {#PEEREMOTEADDR} - state change'
+                      expression: 'last(/Juniper BGP Stats by SNMP/jnxBgpM2PeerState.[{#PEERINDEX}]) <> 6 and last(/Juniper BGP Stats by SNMP/jnxBgpM2PeerState.[{#PEERINDEX}],#2) <> 6'
+                      recovery_expression: 'last(/Juniper BGP Stats by SNMP/jnxBgpM2PeerState.[{#PEERINDEX}])= 6 and avg(/Juniper BGP Stats by SNMP/jnxBgpM2PeerState.[{#PEERINDEX}],5m) = 6'
                   tags:
                     -
                       tag: function
