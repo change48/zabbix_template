@@ -7,15 +7,15 @@ zabbix_export:
     -
       uuid: 36bff6c29af64692839d077febfc7079
       name: 'Templates/Network devices'
-      description: |
-        Juniper BGP Stats by SNMP
-        author: change4826
-        Repo_url: https://github.com/change48/zabbix_template
   templates:
     -
       uuid: 3621c5b6e4ba4c68a1acde652a2f130a
       template: 'Juniper BGP Stats by SNMP'
       name: 'Juniper BGP Stats by SNMP'
+      description: |
+        Juniper BGP Stats by SNMP
+        author: change4826
+        Repo_url: https://github.com/change48/zabbix_template
       groups:
         -
           name: juniper
