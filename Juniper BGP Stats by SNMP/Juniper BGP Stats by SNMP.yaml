@@ -1,7 +1,8 @@
 zabbix_export:
   version: '6.4'
   author: change4826
-  Repo_url: https://github.com/change48/zabbix_template
+  date: '2023-04-02T12:06:00Z'
+  Repo_url: 'https://github.com/change48/zabbix_template'
   template_groups:
     -
       uuid: b91c91171d9d4f7d896da04811adc6c4
@@ -130,7 +131,7 @@ zabbix_export:
                   name: 'BGP Peer {#PEEREMOTEADDR}  PrefixesAccepted value changes more than {$DIFF_RATIO}'
                   opdata: 'Current value: {ITEM.VALUE}'
                   priority: INFO
-                  description: 'bgp接收条目数 较 昨日同一时间 变化区间已超出 > {$DIFF_RATIO}'
+                  description: 'bgp PrefixesAccepted value changes more than > {$DIFF_RATIO}'
                   manual_close: 'YES'
                   tags:
                     -
