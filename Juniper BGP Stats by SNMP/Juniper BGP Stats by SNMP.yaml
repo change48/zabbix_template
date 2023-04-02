@@ -1,6 +1,6 @@
 zabbix_export:
   version: '6.4'
-  author: change4826
+  author: 'change4826'
   date: '2023-04-02T12:06:00Z'
   Repo_url: 'https://github.com/change48/zabbix_template'
   template_groups:
@@ -146,7 +146,7 @@ zabbix_export:
           graph_prototypes:
             -
               uuid: 6474ccc812a54f258c4856ec6509296e
-              name: 'bgp peer  {#PEEREMOTEADDR} - 接收条目'
+              name: 'BGP Peer {#PEEREMOTEADDR} - PrefixesAccepted count'
               graph_items:
                 -
                   drawtype: BOLD_LINE
@@ -212,7 +212,7 @@ zabbix_export:
           value: '0.4'
         -
           macro: '{$IGNORE_ASN}'
-          value: '(23844|^6[45]*)'
+          value: '^6[45]*'
       valuemaps:
         -
           uuid: bc6095e96273492597e6f6bbdb1e3fcb
