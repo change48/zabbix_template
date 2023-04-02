@@ -66,8 +66,6 @@ zabbix_export:
                   name: 'BGP Peer {#PEEREMOTEADDR} - state change'
                   opdata: 'Current value: {ITEM.VALUE}'
                   manual_close: 'YES'
-                  dependencies:
-                    -
                   tags:
                     -
                       tag: function
